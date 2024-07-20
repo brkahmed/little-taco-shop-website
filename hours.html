@@ -37,9 +37,7 @@
     <main>
       <article>
         <h2 class="highlight">Hours</h2>
-        <p>
-          We are open <time datetime="P7D">7 days</time> a week!
-        </p>
+        <p>We are open <time datetime="P7D">7 days</time> a week!</p>
         <dl>
           <dt><time datetime="P5D">Sunday-Thursday</time></dt>
           <dd><time datetime="PT10H">11am-9pm</time></dd>
@@ -50,8 +48,16 @@
     </main>
     <footer class="footer">
       <p>
-        <span class="nowrap">Copyright &copy;</span>
-        <span>2024 Little Taco Shop</span>
+        <span class="nowrap"
+          >Copyright &copy;
+          <script>
+            const currentYear = new Date().getFullYear();
+            document.write(
+              `<time datetime="${currentYear}">${currentYear}</time>`
+            );
+          </script>
+        </span>
+        <span>Little Taco Shop</span>
       </p>
     </footer>
   </body>

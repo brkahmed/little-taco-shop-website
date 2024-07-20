@@ -36,7 +36,9 @@
     </section>
     <main>
       <article id="about">
-        <h2 class="highlight">About <abbr title="The Little Taco Shop">LTS</abbr></h2>
+        <h2 class="highlight">
+          About <abbr title="The Little Taco Shop">LTS</abbr>
+        </h2>
         <p>
           <abbr title="The Little Taco Shop">LTS</abbr> was founded in
           <time datetime="2022">2022</time>. Our shop was built from a
@@ -66,8 +68,16 @@
     </main>
     <footer class="footer">
       <p>
-        <span class="nowrap">Copyright &copy;</span>
-        <span>2024 Little Taco Shop</span>
+        <span class="nowrap"
+          >Copyright &copy;
+          <script>
+            const currentYear = new Date().getFullYear();
+            document.write(
+              `<time datetime="${currentYear}">${currentYear}</time>`
+            );
+          </script>
+        </span>
+        <span>Little Taco Shop</span>
       </p>
     </footer>
   </body>
